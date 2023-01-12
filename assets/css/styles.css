@@ -8,7 +8,7 @@
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 89%, 60%);
+  --first-color: black;
   --second-color: hsl(var(--hue-color), 56%, 12%);
   /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
@@ -49,6 +49,8 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+  background: rgb(252,176,69);
+  background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
 }
 
 h1, h2, p {
@@ -95,7 +97,7 @@ img {
 
 .section {
   padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 /*===== LAYOUT =====*/
@@ -190,8 +192,10 @@ img {
 /*===== HOME =====*/
 .home {
   position: relative;
-  row-gap: 5rem;
-  padding: 4rem 0 5rem;
+  display: flex;
+  /* row-gap: 5rem;
+  padding: 4rem 0 5rem; */
+  justify-content: space-around;
 }
 
 .home__data {
@@ -224,12 +228,17 @@ img {
 }
 
 .home__img {
-  position: absolute;
+  position: relative;
+  
   right: 0;
   bottom: 0;
   width: 260px;
 }
-
+.images img{
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+}
 .home__blob {
   fill: var(--first-color);
 }
@@ -522,7 +531,7 @@ img {
     margin-right: auto;
   }
   .home {
-    padding: 10rem 0 2rem;
+    padding: 10rem 0 10rem;
   }
   .home__img {
     width: 450px;
